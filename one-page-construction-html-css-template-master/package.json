@@ -1,0 +1,31 @@
+{
+  "name": "one-page-construction-html-css-template",
+  "description": "Construct is a clean and modern HTML template for all kinds of Construction and Handyman business.",
+  "author": "Matthew Hartman <matthewhartmanau@gmail.com>",
+  "version": "1.0.0",
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "ie >= 10"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "dependencies": {
+    "@getbase/base": "^5.0.3",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development parcel src/index.html --open",
+    "build": "NODE_ENV=production rm -rf dist && parcel build --no-content-hash src/index.html --public-url ./ --out-dir ./dist",
+    "clean": "rm -rf dist"
+  }
+}

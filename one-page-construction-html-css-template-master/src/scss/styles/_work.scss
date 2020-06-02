@@ -1,0 +1,76 @@
+// Work
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.work-item {
+  position: relative;
+  display: block;
+  min-height: 200px;
+  color: $black;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 40px;
+  @include breakpoint(m) {
+    margin-bottom: 0;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include background-rgba($dark-grey, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+    z-index: 1;
+  }
+  img {
+    width: 100%;
+    @include breakpoint(m) {
+      width: auto;
+      height: 300px;
+    }
+    display: block;
+    transition: all .3s;
+  }
+  .work-item-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    z-index: 5;
+    padding: 20px;
+  }
+  &:hover {
+    .work-item-inner { opacity: 1; }
+    &:after {
+      @include background-rgba($darkest-grey, .6);
+    }
+    img {
+      transform: scale(1.1);
+      opacity: .9;
+    }
+  }
+}
+.work-heading-small {
+  font-family: $base-heading-font-family;
+  font-size: 10px;
+  line-height: 16px;
+  color: $light-grey;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+}
+.work-heading-big {
+  font-family: $base-heading-font-family;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: block;
+}

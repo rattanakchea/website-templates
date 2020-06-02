@@ -1,0 +1,121 @@
+// Footer
+.footer { background: $darker-grey; }
+
+.footer a { color: $white; }
+
+.footer-heading {
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.footer-copy {
+  font-size: 13px;
+  line-height: 20px;
+  color: $light-grey;
+}
+
+.footer-contact-list {
+  color: $light-grey;
+  .contact-icon-location:before { background: url(../img/footer-location.svg) 50% 50% no-repeat; }
+  .contact-icon-phone:before { background: url(../img/footer-phone.svg) 50% 50% no-repeat; }
+  .contact-icon-email:before { background: url(../img/footer-mail.svg) 50% 50% no-repeat; }
+}
+
+.social-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 15px 0 0 0;
+  @include breakpoint(m) {
+    padding-top: 0;
+  }
+}
+.social-list-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0 2px;
+}
+.social-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  &:before {
+    transition: all .3s;
+    font-size: 11px;
+    line-height: 17px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    transform: translate(-50%, 100%);
+    left: 20px;
+    color: $black;
+    padding: 5px;
+    background: $white;
+    border-radius: 5px;
+    display: block;
+    content: attr(title);
+    opacity: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    transition: all .2s;
+  }
+  &:hover, &:focus {
+    &:before { opacity: 1; }
+    &:after { transform: translateY(-8px); }
+  }
+}
+.social-facebook:after { background: url(../img/facebook-with-circle.svg) 50% 50% no-repeat; }
+.social-instagram:after { background: url(../img/instagram-with-circle.svg) 50% 50% no-repeat; }
+.social-linkedin:after { background: url(../img/linkedin-with-circle.svg) 50% 50% no-repeat; }
+.social-pinterest:after { background: url(../img/pinterest-with-circle.svg) 50% 50% no-repeat; }
+.social-twitter:after { background: url(../img/twitter-with-circle.svg) 50% 50% no-repeat; }
+.social-youtube:after { background: url(../img/youtube-with-circle.svg) 50% 50% no-repeat; }
+
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gallery-list-item {
+  padding: 2px 2px 0 0;
+}
+.gallery-item {
+  display: block;
+  overflow: hidden;
+  img {
+    display: block;
+    transition: all .2s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.footer-inner {
+  font-size: 13px;
+  line-height: 18px;
+  background: $darkest-grey;
+  color: $white;
+  padding: 20px 0;
+  p { margin: 0; }
+}
+
+.footer-inline-list {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0 0 0;
+  @include breakpoint(m) {
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+}

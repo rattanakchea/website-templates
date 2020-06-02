@@ -1,0 +1,60 @@
+// Contact
+.contact-block { background: $white; }
+
+.contact-form {
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.contact-copy { color: $black; }
+
+.map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 250px;
+  @include breakpoint(l) {
+    height: 540px;
+  }
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: $black;
+}
+
+.contact-button {
+  display: block;
+  width: 100%;
+}
+
+.contact-icon {
+  margin: 0 0 5px 0;
+  position: relative;
+  padding-left: 30px;
+  &:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    margin-right: 10px;
+  }
+}
+.contact-icon-location:before { background: url(../img/location.svg) 50% 50% no-repeat; }
+.contact-icon-phone:before { background: url(../img/phone.svg) 50% 50% no-repeat; }
+.contact-icon-email:before { background: url(../img/mail.svg) 50% 50% no-repeat; }
